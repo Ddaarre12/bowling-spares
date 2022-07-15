@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Spares</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <td>Pin(s)</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>%</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <button class="1" id="1" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="1" id="2" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="1" id="3" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="1" id="4" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="1" id="5" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="1" id="6" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="1" id="7" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="1" id="8" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare1"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                <button class="2" id="9" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="2" id="10" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="2" id="11" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="2" id="12" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="2" id="13" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="2" id="14" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="2" id="15" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="2" id="16" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare2"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>
+                <button class="3" id="17" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="3" id="18" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="3" id="19" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="3" id="20" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="3" id="21" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="3" id="22" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td> 
+                <button class="3" id="23" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="3" id="24" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare3"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>
+                <button class="4" id="25" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="4" id="26" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="4" id="27" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="4" id="28" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="4" id="29" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="4" id="30" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="4" id="31" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="4" id="32" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare4"></td>
+        </tr>
+        <tr>
+            <td>3-6</td>
+            <td>
+                <button class="5" id="33" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="5" id="34" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="5" id="35" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="5" id="36" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="5" id="37" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="5" id="38" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="5" id="39" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="5" id="40" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare5"></td>
+        </tr>
+        <tr>
+            <td>3-9</td>
+            <td>
+                <button class="6" id="41" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="6" id="42" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="6" id="43" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="6" id="44" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="6" id="45" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="6" id="46" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="6" id="47" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="6" id="48" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare6"></td>
+        </tr>
+        <tr>
+            <td>3-10</td>
+            <td>
+                <button class="7" id="49" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="7" id="50" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="7" id="51" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="7" id="52" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="7" id="53" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="7" id="54" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="7" id="55" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="7" id="56" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare7"></td>
+        </tr>
+        <tr>
+            <td>6-10</td>
+            <td>
+                <button class="8" id="57" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="8" id="58" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="8" id="59" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="8" id="60" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="8" id="61" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="8" id="62" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="8" id="63" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="8" id="64" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare8"></td>
+        </tr>
+        <tr>
+            <td>3-6-10</td>
+            <td>
+                <button class="9" id="65" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="9" id="66" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="9" id="67" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="9" id="68" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="9" id="69" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="9" id="70" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="9" id="71" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="9" id="72" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare9"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <button class="10" id="73" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="10" id="74" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="10" id="75" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="10" id="76" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="10" id="77" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="10" id="78" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="10" id="79" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="10" id="80" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare10"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                <button class="11" id="81" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="11" id="82" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="11" id="83" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="11" id="84" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="11" id="85" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="11" id="86" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="11" id="87" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="11" id="88" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare11"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>
+                <button class="12" id="89" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="12" id="90" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="12" id="91" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="12" id="92" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="12" id="93" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="12" id="94" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="12" id="95" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="12" id="96" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare12"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>
+                <button class="13" id="97" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="13" id="98" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="13" id="99" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="13" id="100" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="13" id="101" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="13" id="102" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="13" id="103" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="13" id="104" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare13"></td>
+        </tr>
+        <tr>
+            <td>2-4</td>
+            <td>
+                <button class="14" id="105" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="14" id="106" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="14" id="107" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="14" id="108" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="14" id="109" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="14" id="110" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="14" id="111" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="14" id="112" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare14"></td>
+        </tr>
+        <tr>
+            <td>2-7</td>
+            <td>
+                <button class="15" id="113" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="15" id="114" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="15" id="115" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="15" id="116" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="15" id="117" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="15" id="118" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="15" id="119" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="15" id="120" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare15"></td>
+        </tr>
+        <tr>
+            <td>2-8</td>
+            <td>
+                <button class="16" id="121" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="16" id="122" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="16" id="123" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="16" id="124" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="16" id="125" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="16" id="126" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="16" id="127" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="16" id="128" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare16"></td>
+        </tr>
+        <tr>
+            <td>4-7</td>
+            <td>
+                <button class="17" id="129" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="17" id="130" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="17" id="131" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="17" id="132" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="17" id="133" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="17" id="134" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="17" id="135" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="17" id="136" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare17"></td>
+        </tr>
+        <tr>
+            <td>2-4-7</td>
+            <td>
+                <button class="18" id="137" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="18" id="138" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="18" id="139" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="18" id="140" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="18" id="141" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="18" id="142" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td>
+                <button class="18" id="143" onclick="pressCheck(this.value, this.id)" value="off"><i class="bi bi-check"></i></button>
+                <button class="18" id="144" onclick="pressX(this.value, this.id)" value="off"><i class="bi bi-x"></i></button>
+            </td>
+            <td class="percent" id="spare18"></td>
+        </tr>
+    </table>
+    <button id="clear">Clear</button>
+    <script src="main.js"></script>
+</body>
+</html>
